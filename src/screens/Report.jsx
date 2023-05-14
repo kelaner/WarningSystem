@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Discuss from '../components/Discuss'
 
-const Report = ({ navigation }) => {
+const Report = () => {
     return (
-        <Discuss />
+        <View>
+            <Text>Report</Text>
+        </View>
     )
 }
 
