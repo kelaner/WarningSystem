@@ -15,7 +15,7 @@ const HomeStack = () => {
                 options={{
                     title: '首页',
                     headerTitleAlign: "center",
-                    headerShown: false,
+                    // headerShown: false,
                 }}
             />
         </Stack.Navigator>

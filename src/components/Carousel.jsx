@@ -1,14 +1,14 @@
 import { StyleSheet, Image, View, Text } from 'react-native'
-import React, { useState, useEffect } from 'react'
+import * as React from 'react';
 import PagerView from 'react-native-pager-view';
 
 const items = [
-    require('../../assets/images/index0.jpg'),
-    require('../../assets/images/index1.jpg'),
-    require('../../assets/images/index2.jpg'),
-    require('../../assets/images/index3.jpg'),
-    require('../../assets/images/index4.jpg'),
-    require('../../assets/images/index5.jpg'),
+    require('../../assets/img/index0.jpg'),
+    require('../../assets/img/index1.jpg'),
+    require('../../assets/img/index2.jpg'),
+    require('../../assets/img/index3.jpg'),
+    require('../../assets/img/index4.jpg'),
+    require('../../assets/img/index5.jpg'),
 ];
 
 const ImageList = items.map((item, index) =>
@@ -16,10 +16,7 @@ const ImageList = items.map((item, index) =>
         style={{
             width: '100%',
             height: 200,
-            borderTopLeftRadius: 30,
-            borderTopRightRadius: 30,
-            borderBottomLeftRadius: 30,
-            borderBottomRightRadius: 30,
+            borderRadius: 25,
         }} />
 )
 
@@ -42,9 +39,9 @@ const Dots = ({ currentPage, totalPages }) => {
 
 
 const Carousel = ({ navigation }) => {
-    const [currentPage, setCurrentPage] = useState(0);
+    const [currentPage, setCurrentPage] = React.useState(0);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const timer = setInterval(() => {
             let nextPage = currentPage + 1;
             if (nextPage >= items.length) {
@@ -60,7 +57,7 @@ const Carousel = ({ navigation }) => {
     const pagerView = React.useRef(null);
 
     return (
-        <View style={styles.container}>
+        <View style={styles.containe}>
             <PagerView
                 style={styles.pagerview}
                 initialPage={0}
@@ -72,18 +69,16 @@ const Carousel = ({ navigation }) => {
             </PagerView>
             <Dots currentPage={currentPage} totalPages={items.length} />
         </View>
-
     )
 }
 
 export default Carousel
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#f8f9fa',
+    containe: {
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        height: 200,
     },
     pagerview: {
         width: 300,

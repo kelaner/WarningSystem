@@ -1,15 +1,10 @@
-import { StyleSheet, Text, View,Button } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
+import Discuss from '../components/Discuss'
 
 const Report = ({ navigation }) => {
     return (
-        <View>
-            <Text>Report</Text>
-            <Button
-                title="跳到首页"
-                onPress={() => navigation.navigate('Home')}
-            />
-        </View>
+        <Discuss />
     )
 }
 
