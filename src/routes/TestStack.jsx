@@ -20,7 +20,7 @@ const TestStack = () => {
                     headerTitleAlign: "center",
                 }}
             />
-                        <Stack.Screen
+            <Stack.Screen
                 name='FirstTest'
                 component={FirstTest}
                 options={{
@@ -28,7 +28,7 @@ const TestStack = () => {
                     headerTitleAlign: "center",
                 }}
             />
-                        <Stack.Screen
+            <Stack.Screen
                 name='SecondTest'
                 component={SecondTest}
                 options={{
@@ -36,7 +36,7 @@ const TestStack = () => {
                     headerTitleAlign: "center",
                 }}
             />
-                        <Stack.Screen
+            <Stack.Screen
                 name='ThirdTest'
                 component={ThirdTest}
                 options={{

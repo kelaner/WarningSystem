@@ -33,7 +33,7 @@ const Report = ({ navigation }) => {
         if (skiaRef.current) {
             chart = echarts.init(skiaRef.current, 'light', {
                 renderer: 'svg',
-                width: screenWidth - 20,
+                width: screenWidth,
                 height: 300,
             });
             chart.setOption(option);
@@ -57,12 +57,14 @@ const Report = ({ navigation }) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
-                onPress={() => navigation.navigate('ReportScord')}>
+                onPress={() => navigation.navigate('ReportScord')}
+            >
                 <Text style={styles.text}>记录2</Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
-                onPress={() => navigation.navigate('ReportScord')}>
+                onPress={() => navigation.navigate('ReportScord')}
+            >
                 <Text style={styles.text}>记录3</Text>
             </TouchableOpacity>
         </View>
@@ -79,6 +81,7 @@ const styles = StyleSheet.create({
     title: {
         color: 'black',
         fontSize: 24,
+        marginBottom: 20,
     },
     button: {
         marginTop: 10,
