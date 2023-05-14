@@ -14,7 +14,7 @@ const Tab = createBottomTabNavigator();
 const index = () => {
     return (
         <Tab.Navigator
-            initialRouteName="测试"
+            initialRouteName="报告"
             screenOptions={({ route }) => ({
                 tabBarActiveTintColor: "black",
                 tabBarIcon: ({ focused, size, color }) => {
