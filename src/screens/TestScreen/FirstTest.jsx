@@ -67,7 +67,7 @@ const FirstTest = ({ navigation }) => {
             </View>
 
             <TouchableOpacity
-                style={recording ? styles.voiceRecording : styles.voice}
+                style={recording ? styles.on : styles.off}
                 activeOpacity={0.8}
                 onPress={recording ? stopRecording : startRecording}
             >
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         margin: 10,
     },
-    voice: {
+    off: {
         backgroundColor: '#097ef2',
         borderRadius: (screenWidth - 230) / 2,
         width: screenWidth - 230,
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    voiceRecording: {
+    on: {
         backgroundColor: '#f1504e',
         borderRadius: (screenWidth - 230) / 2,
         width: screenWidth - 230,

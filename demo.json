@@ -1,0 +1,367 @@
+{
+    "_cameraHandle": 325,
+    "_cameraRef": {
+        "_children": [
+            [ReactNativeFiberHostComponent
+            ]
+        ],
+        "_internalFiberInstanceHandleDEV": {
+            "_debugHookTypes": null,
+            "_debugNeedsRemount": false,
+            "_debugOwner": [FiberNode
+            ],
+            "_debugSource": null,
+            "actualDuration": 6.953154146671295,
+            "actualStartTime": 355573643.331347,
+            "alternate": [FiberNode
+            ],
+            "child": [FiberNode
+            ],
+            "childLanes": 0,
+            "deletions": null,
+            "dependencies": null,
+            "elementType": "ViewManagerAdapter_ExponentCamera",
+            "flags": 512,
+            "index": 0,
+            "key": null,
+            "lanes": 0,
+            "memoizedProps": [Object
+            ],
+            "memoizedState": null,
+            "mode": 2,
+            "pendingProps": [Object
+            ],
+            "ref": [Function anonymous
+            ],
+            "return": [FiberNode
+            ],
+            "selfBaseDuration": 0.03077000379562378,
+            "sibling": null,
+            "stateNode": [Circular
+            ],
+            "subtreeFlags": 1049093,
+            "tag": 5,
+            "treeBaseDuration": 4.808922171592712,
+            "type": "ViewManagerAdapter_ExponentCamera",
+            "updateQueue": null
+        },
+        "_nativeTag": 325,
+        "viewConfig": {
+            "NativeProps": [Object
+            ],
+            "bubblingEventTypes": [Object
+            ],
+            "directEventTypes": [Object
+            ],
+            "uiViewClassName": "ViewManagerAdapter_ExponentCamera",
+            "validAttributes": [Object
+            ]
+        }
+    },
+    "_lastEvents": {},
+    "_lastEventsTimes": {},
+    "_onCameraReady": [Function anonymous
+    ],
+    "_onMountError": [Function anonymous
+    ],
+    "_onObjectDetected": [Function anonymous
+    ],
+    "_reactInternalInstance": {},
+    "_reactInternals": {
+        "_debugHookTypes": null,
+        "_debugNeedsRemount": false,
+        "_debugOwner": {
+            "_debugHookTypes": [Array
+            ],
+            "_debugNeedsRemount": false,
+            "_debugOwner": [FiberNode
+            ],
+            "_debugSource": undefined,
+            "actualDuration": 42.514999747276306,
+            "actualStartTime": 355573623.446347,
+            "alternate": [FiberNode
+            ],
+            "child": [FiberNode
+            ],
+            "childLanes": 0,
+            "deletions": null,
+            "dependencies": null,
+            "elementType": [Function SecondTest
+            ],
+            "flags": 8390657,
+            "index": 0,
+            "key": null,
+            "lanes": 1,
+            "memoizedProps": [Object
+            ],
+            "memoizedState": [Object
+            ],
+            "mode": 2,
+            "pendingProps": [Object
+            ],
+            "ref": null,
+            "return": [FiberNode
+            ],
+            "selfBaseDuration": 9.68553900718689,
+            "sibling": null,
+            "stateNode": null,
+            "subtreeFlags": 9439749,
+            "tag": 0,
+            "treeBaseDuration": 34.177766025066376,
+            "type": [Function SecondTest
+            ],
+            "updateQueue": [Object
+            ]
+        },
+        "_debugSource": undefined,
+        "actualDuration": 14.077693164348602,
+        "actualStartTime": 355573636.206116,
+        "alternate": {
+            "_debugHookTypes": null,
+            "_debugNeedsRemount": false,
+            "_debugOwner": [FiberNode
+            ],
+            "_debugSource": undefined,
+            "actualDuration": 5.689540088176727,
+            "actualStartTime": 355577519.886655,
+            "alternate": [Circular
+            ],
+            "child": [FiberNode
+            ],
+            "childLanes": 0,
+            "deletions": null,
+            "dependencies": null,
+            "elementType": [Function Camera
+            ],
+            "flags": 1,
+            "index": 1,
+            "key": null,
+            "lanes": 0,
+            "memoizedProps": [Object
+            ],
+            "memoizedState": null,
+            "mode": 2,
+            "pendingProps": [Object
+            ],
+            "ref": [Object
+            ],
+            "return": [FiberNode
+            ],
+            "selfBaseDuration": 0.8206149935722351,
+            "sibling": [FiberNode
+            ],
+            "stateNode": [Circular
+            ],
+            "subtreeFlags": 5,
+            "tag": 1,
+            "treeBaseDuration": 5.594308078289032,
+            "type": [Function Camera
+            ],
+            "updateQueue": [Object
+            ]
+        },
+        "child": {
+            "_debugHookTypes": null,
+            "_debugNeedsRemount": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 8.331846117973328,
+            "actualStartTime": 355573641.952885,
+            "alternate": [FiberNode
+            ],
+            "child": [FiberNode
+            ],
+            "childLanes": 0,
+            "deletions": null,
+            "dependencies": null,
+            "elementType": [Object
+            ],
+            "flags": 1,
+            "index": 0,
+            "key": null,
+            "lanes": 0,
+            "memoizedProps": [Object
+            ],
+            "memoizedState": null,
+            "mode": 2,
+            "pendingProps": [Object
+            ],
+            "ref": [Function anonymous
+            ],
+            "return": [Circular
+            ],
+            "selfBaseDuration": 1.375,
+            "sibling": null,
+            "stateNode": null,
+            "subtreeFlags": 1049093,
+            "tag": 11,
+            "treeBaseDuration": 6.183922171592712,
+            "type": [Object
+            ],
+            "updateQueue": null
+        },
+        "childLanes": 0,
+        "deletions": null,
+        "dependencies": null,
+        "elementType": [Function Camera
+        ],
+        "flags": 1049089,
+        "index": 1,
+        "key": null,
+        "lanes": 0,
+        "memoizedProps": {
+            "autoFocus": true,
+            "children": <TouchableOpacity … />,
+            "faceDetectorSettings": [Object
+            ],
+            "flashMode": 0,
+            "focusDepth": 0,
+            "ratio": "4:3",
+            "type": "front",
+            "whiteBalance": 0,
+            "zoom": 0
+        },
+        "memoizedState": null,
+        "mode": 2,
+        "pendingProps": {
+            "autoFocus": true,
+            "children": <TouchableOpacity … />,
+            "faceDetectorSettings": [Object
+            ],
+            "flashMode": 0,
+            "focusDepth": 0,
+            "ratio": "4:3",
+            "type": "front",
+            "whiteBalance": 0,
+            "zoom": 0
+        },
+        "ref": {
+            "current": [Circular
+            ]
+        },
+        "return": {
+            "_debugHookTypes": null,
+            "_debugNeedsRemount": false,
+            "_debugOwner": [FiberNode
+            ],
+            "_debugSource": undefined,
+            "actualDuration": 32.60999983549118,
+            "actualStartTime": 355573633.357501,
+            "alternate": [FiberNode
+            ],
+            "child": [FiberNode
+            ],
+            "childLanes": 0,
+            "deletions": null,
+            "dependencies": null,
+            "elementType": "RCTView",
+            "flags": 0,
+            "index": 0,
+            "key": null,
+            "lanes": 0,
+            "memoizedProps": [Object
+            ],
+            "memoizedState": null,
+            "mode": 2,
+            "pendingProps": [Object
+            ],
+            "ref": null,
+            "return": [FiberNode
+            ],
+            "selfBaseDuration": 0.0550769567489624,
+            "sibling": null,
+            "stateNode": [ReactNativeFiberHostComponent
+            ],
+            "subtreeFlags": 9439749,
+            "tag": 5,
+            "treeBaseDuration": 24.27899706363678,
+            "type": "RCTView",
+            "updateQueue": null
+        },
+        "selfBaseDuration": 5.740616023540497,
+        "sibling": {
+            "_debugHookTypes": null,
+            "_debugNeedsRemount": false,
+            "_debugOwner": [FiberNode
+            ],
+            "_debugSource": undefined,
+            "actualDuration": 15.540917575359344,
+            "actualStartTime": 355573650.339347,
+            "alternate": [FiberNode
+            ],
+            "child": [FiberNode
+            ],
+            "childLanes": 0,
+            "deletions": null,
+            "dependencies": null,
+            "elementType": [Object
+            ],
+            "flags": 1048577,
+            "index": 2,
+            "key": null,
+            "lanes": 0,
+            "memoizedProps": [Object
+            ],
+            "memoizedState": null,
+            "mode": 2,
+            "pendingProps": [Object
+            ],
+            "ref": null,
+            "return": [FiberNode
+            ],
+            "selfBaseDuration": 0.17323100566864014,
+            "sibling": null,
+            "stateNode": null,
+            "subtreeFlags": 9439749,
+            "tag": 11,
+            "treeBaseDuration": 11.529995739459991,
+            "type": [Object
+            ],
+            "updateQueue": null
+        },
+        "stateNode": [Circular
+        ],
+        "subtreeFlags": 1049093,
+        "tag": 1,
+        "treeBaseDuration": 11.92453819513321,
+        "type": [Function Camera
+        ],
+        "updateQueue": {
+            "baseState": null,
+            "effects": null,
+            "firstBaseUpdate": null,
+            "lastBaseUpdate": null,
+            "shared": [Object
+            ]
+        }
+    },
+    "_setReference": [Function anonymous
+    ],
+    "context": {},
+    "props": {
+        "autoFocus": true,
+        "children": <TouchableOpacity style={
+            [Object
+            ]
+        } />,
+        "faceDetectorSettings": {},
+        "flashMode": 0,
+        "focusDepth": 0,
+        "ratio": "4:3",
+        "type": "front",
+        "whiteBalance": 0,
+        "zoom": 0
+    },
+    "refs": {},
+    "state": null,
+    "updater": {
+        "enqueueForceUpdate": [Function enqueueForceUpdate
+        ],
+        "enqueueReplaceState": [Function enqueueReplaceState
+        ],
+        "enqueueSetState": [Function enqueueSetState
+        ],
+        "isMounted": [Function isMounted
+        ]
+    }
+}
