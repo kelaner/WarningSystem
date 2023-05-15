@@ -86,16 +86,16 @@ const Discuss = () => {
                 open={open}
                 icon={open ? 'book' : 'plus'}
                 actions={[
-                    { icon: 'plus', onPress: () => console.log('Pressed add') },
+                    { icon: 'plus', onPress: () => alert('Tode:Add Press') },
                     {
                         icon: 'star',
                         label: 'Star',
-                        onPress: () => console.log('Pressed star'),
+                        onPress: () => alert('Todo:Check Stars'),
                     },
                     {
                         icon: 'bell',
                         label: 'Remind',
-                        onPress: () => console.log('Pressed notifications'),
+                        onPress: () => alert('Todo: Notifications'),
                     },
                 ]}
                 onStateChange={onStateChange}
