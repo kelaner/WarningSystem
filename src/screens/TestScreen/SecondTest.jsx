@@ -50,8 +50,8 @@ const SecondTest = ({ navigation }) => {
                 // setUri(await cameraRef.current.recordAsync());
                 console.log('Video recorded at', uri);
                 await Toast.show("录制成功");
-                setUri(uri);
-                console.log(auri);
+                await setUri(uri);
+                await console.log(auri);
                 if (auri === null) {
                     await Toast.show("录制失败");
                 }
