@@ -2,6 +2,7 @@ import { StyleSheet, View, Button, Dimensions, Text, TouchableOpacity } from 're
 import * as React from 'react';
 import Toast from 'react-native-root-toast';
 import { Camera, CameraType } from 'expo-camera';
+import { Video, ResizeMode } from 'expo-av';
 import MCIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 const screenWidth = Dimensions.get('window').width;
@@ -10,8 +11,11 @@ const screenHeight = Dimensions.get('window').height;
 const SecondTest = ({ navigation }) => {
     const [type, setType] = React.useState(CameraType.front);
     const [cameraSwitch, setCameraSwitch] = React.useState(false);
+    const [videoSwitch, setVideoSwitch] = React.useState(false);
+    const [cameraShow, setCameraShow] = React.useState(true);
     const cameraRef = React.useRef(null);
-    // cameraRef.current = null;
+    const videoRef = React.useRef(null);
+    const [auri, setUri] = React.useState(null);
 
     // 切换摄像头
     function toggleCameraType() {
@@ -41,9 +45,17 @@ const SecondTest = ({ navigation }) => {
         if (cameraRef.current) {
             try {
                 Toast.show('开始录像');
-                console.log('开始录像')
+                console.log('开始录像');
                 const { uri } = await cameraRef.current.recordAsync();
+                // setUri(await cameraRef.current.recordAsync());
                 console.log('Video recorded at', uri);
+                await Toast.show("录制成功");
+                setUri(uri);
+                console.log(auri);
+                if (auri === null) {
+                    await Toast.show("录制失败");
+                }
+
             } catch (error) {
                 console.error(error);
             }
@@ -57,20 +69,95 @@ const SecondTest = ({ navigation }) => {
             Toast.show('录像结束');
             console.log('录像结束')
         } else {
-            Toast.show('结束条件未触发');
-            console.log('结束条件未触发')
+            Toast.show('录制出错');
+            console.log('录制出错')
         }
     };
 
-    const checkoutSwitch =  () => {
+    //录制开关
+    const checkoutCameraSwitch = () => {
         if (cameraSwitch === false) {
-             handleRecording();
+            handleRecording();
             setCameraSwitch(true);
         } else if (cameraSwitch === true) {
             handleStopRecording();
             setCameraSwitch(false);
         }
     }
+
+    //录制回看开关
+    const checkoutVideoSwitch = () => {
+        if (auri === null) {
+            Toast.show('题目未作答');
+        } else if (videoSwitch === false) {
+            Toast.show("回看");
+            setCameraShow(false);
+            setVideoSwitch(true);
+        } else if (videoSwitch === true) {
+            Toast.show("取消回看");
+            setVideoSwitch(false);
+        }
+    }
+
+    //相机预览界面开关
+    const showCamera = async () => {
+        if (cameraShow === false) {
+            Toast.show("Enable Preview");
+            setVideoSwitch(false);
+            setCameraShow(true);
+        } else if (cameraShow === true) {
+            setCameraShow(false);
+        }
+    }
+
+    //相机预览界面
+    const cameraPlayer = (
+        <Camera
+            style={styles.camera}
+            type={type}
+            ref={cameraRef} >
+        </Camera>
+    )
+
+    const cameraPlayerHide = (
+        <Camera
+            style={styles.cameraHide}
+            type={type}
+            ref={cameraRef} >
+        </Camera>
+    )
+
+
+    //回看视频界面
+    const videoPlayer = (
+        <Video
+            ref={videoRef}
+            style={{
+                width: 200,
+                height: 200
+            }}
+            source={{ uri: auri }}
+            useNativeControls={true}
+            resizeMode={ResizeMode.CONTAIN}
+            isLooping={false}
+            shouldPlay
+        >
+        </Video>
+    )
+
+
+    //相机前后置切换开关
+    const toggleType = (
+        <TouchableOpacity
+            style={styles.defaultButton}
+            activeOpacity={0.8}
+            onPress={toggleCameraType}>
+            <Text style={{ color: 'white' }}>
+                <MCIcons name='camera-flip-outline' size={25} />
+            </Text>
+        </TouchableOpacity>
+    )
+
 
 
     return (
@@ -88,38 +175,41 @@ const SecondTest = ({ navigation }) => {
                 </Text>
             </View>
 
-            <Camera type={type} ref={cameraRef}>
-                <TouchableOpacity style={styles.camera}>
-                </TouchableOpacity>
-            </Camera>
+            {videoSwitch ? videoPlayer : null}
+            {cameraShow ? cameraPlayer : cameraPlayerHide}
 
             <View style={{ flexDirection: 'row' }} >
                 <TouchableOpacity
-                    style={cameraSwitch ? styles.on : styles.off}
+                    style={cameraSwitch ? styles.onButton : styles.defaultButton}
                     activeOpacity={0.8}
-                    onPress={() => checkoutSwitch()}>
+                    onPress={checkoutCameraSwitch}>
                     <Text style={{ color: 'white' }}>
                         <MCIcons name='camera-outline' size={25} />
                     </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={styles.cameraButton}
+                    style={auri === null ? styles.offButton :
+                        videoSwitch ? styles.onButton :
+                            styles.defaultButton}
                     activeOpacity={0.8}
-                    onPress={toggleCameraType}>
-                    <Text style={{ color: 'white' }}>
-                        <MCIcons name='camera-flip-outline' size={25} />
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                    style={styles.cameraButton}
-                    activeOpacity={0.8}
-                    onPress={toggleCameraType}>
+                    onPress={checkoutVideoSwitch}>
                     <Text style={{ color: 'white' }}>
                         <MCIcons name='camera-image' size={25} />
                     </Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={cameraShow ? styles.defaultButton : styles.offButton}
+                    activeOpacity={0.8}
+                    onPress={showCamera}>
+                    <Text style={{ color: 'white' }}>
+                        <MCIcons name={videoSwitch ? 'eye-off-outline' : 'eye-outline'} size={25} />
+                    </Text>
+                </TouchableOpacity>
+
+                {cameraShow ? toggleType : null}
+
             </View>
         </View>
     )
@@ -148,6 +238,12 @@ const styles = StyleSheet.create({
         width: 150,
         height: 200,
     },
+    cameraHide: {
+        width: 150,
+        height: 200,
+        position: 'absolute',
+        top: -1000,
+    },
     text: {
         fontWeight: 'bold',
         fontSize: 16,
@@ -158,31 +254,31 @@ const styles = StyleSheet.create({
         fontSize: 12,
         margin: 10,
     },
-    cameraButton: {
+    defaultButton: {
         backgroundColor: '#097ef2',
         borderRadius: 30,
         width: 60,
         height: 60,
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 20
+        margin: 10
     },
-    off: {
-        backgroundColor: '#097ef2',
+    offButton: {
+        backgroundColor: '#333333',
         borderRadius: 30,
         width: 60,
         height: 60,
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 20
+        margin: 10
     },
-    on: {
+    onButton: {
         backgroundColor: '#f1504e',
         borderRadius: 30,
         width: 60,
         height: 60,
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 20
+        margin: 10
     },
 })
