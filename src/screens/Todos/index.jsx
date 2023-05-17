@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,Button } from 'react-native'
 import React from 'react'
 
-const Todos = ({ navigation }) => {
+const Index = ({ navigation }) => {
     return (
         <View>
             <Text>Todos</Text>
@@ -13,6 +13,6 @@ const Todos = ({ navigation }) => {
     )
 }
 
-export default Todos
+export default Index
 
 const styles = StyleSheet.create({})

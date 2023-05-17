@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native-paper';
 
-export default function Test({ navigation }) {
+export default function Index({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>选择测试类型</Text>

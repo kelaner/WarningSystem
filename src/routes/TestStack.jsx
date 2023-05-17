@@ -2,10 +2,10 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import TestScreen from '../screens/Test'
-import FirstTest from '../screens/TestScreen/FirstTest'
-import SecondTest from '../screens/TestScreen/SecondTest'
-import ThirdTest from '../screens/TestScreen/ThirdTest'
+import TestScreen from '../screens/TheTest'
+import FirstTest from '../screens/TheTest/TestScreens/FirstTest'
+import SecondTest from '../screens/TheTest/TestScreens/SecondTest'
+import ThirdTest from '../screens/TheTest/TestScreens/ThirdTest'
 
 const Stack = createNativeStackNavigator();
 

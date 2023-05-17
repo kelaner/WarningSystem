@@ -10,7 +10,7 @@ echarts.use([SVGRenderer, LineChart, GridComponent]);
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 
-const Report = ({ navigation }) => {
+const Index = ({ navigation }) => {
     const skiaRef = React.useRef(null);
     React.useEffect(() => {
         const option = {
@@ -71,7 +71,7 @@ const Report = ({ navigation }) => {
     )
 }
 
-export default Report
+export default Index
 
 const styles = StyleSheet.create({
     container: {

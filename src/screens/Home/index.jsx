@@ -1,15 +1,14 @@
 import { StyleSheet, Image, View, Text, Dimensions } from 'react-native'
 import React, { useState, useEffect } from 'react'
 
-import Carousel from '../components/Carousel'
-import Notice from '../components/Notice'
-import Discuss from '../components/Discuss'
+import Carousel from '../../components/Carousel'
+import Notice from '../../components/Notice'
+import Discuss from '../../components/Discuss'
 
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 
-const Home = ({ navigation }) => {
-
+const Index = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
@@ -29,7 +28,7 @@ const Home = ({ navigation }) => {
     )
 }
 
-export default Home
+export default Index
 
 const styles = StyleSheet.create({
     container: {

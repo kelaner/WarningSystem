@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View ,Button} from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 
-const User = ({ navigation }) => {
+const Index = ({ navigation }) => {
     return (
         <View>
             <Text>User</Text>
@@ -13,6 +13,6 @@ const User = ({ navigation }) => {
     )
 }
 
-export default User
+export default Index
 
 const styles = StyleSheet.create({})

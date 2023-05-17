@@ -3,7 +3,7 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import ReportScreen from '../screens/Report'
-import ReportScord from '../screens/ReportScord'
+import ReportScord from '../screens/Report/ReportScord'
 
 const Stack = createNativeStackNavigator();
 
